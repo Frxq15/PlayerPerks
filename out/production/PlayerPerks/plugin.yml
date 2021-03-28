@@ -1,0 +1,28 @@
+
+name: PlayerPerks
+version: 1.0
+main: me.Frxq15.PlayerPerks.Main
+api-version: 1.8
+authors: [Frxq15]
+description: Player Perks Plugin
+commands:
+  perks:
+    usage: /<command>
+    description: perks command
+    aliases: [playerperks]
+  fly:
+    usage: /<command>
+    description: fly command
+    aliases: [efly]
+  setafkmessage:
+    usage: /<command> <message>
+    description: setafkmessage command
+    aliases: [setafkmsg]
+  clearafkmessage:
+    usage: /<command> <message>
+    description: setafkmessage command
+    aliases: [clearafkmsg]
+  globalfly:
+    usage: /<command> <args>
+    description: globalfly command
+    aliases: [gfly]

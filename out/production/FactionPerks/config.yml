@@ -1,0 +1,29 @@
+NO_PERMISSION: "&cNo Permission."
+PERK_ALREADY_UNLOCKED: "&&You have already unlocked this perk."
+
+
+GUI:
+  GUI_TITLE: "&bPlayer Perks"
+  CONFIRM_GUI_TITLE: "&bConfirm Purchase:"
+  LORE_OUTCOMES:
+    CLICK_TO_PURCHASE: "&7Click to purchase this perk."
+    ALREADY_UNLOCKED: "&7You have already unlocked this perk."
+    STATUS_LOCKED: "&cLocked"
+    STATUS_UNLOCKED: "&aUnlocked"
+    CURRENTLY_DISABLED: "&cThis perk is currently disabled."
+PERKS:
+  FALL_DAMAGE:
+    ENABLED: true
+    COST: 1000000
+    ITEM: "GOLD_BOOTS"
+    SLOT: 0
+    NAME: "&b&nFall Damage"
+    LORE:
+      - '&7Tired of dieing from fall damage? Invest'
+      - '&7in this perk to stop yourself taking fall damage.'
+      - ''
+      - '&b&l • &7Cost: &b%cost%'
+      - '&b&l • &7Status: %status%'
+      - ''
+      - '%lore_outcome%'
+

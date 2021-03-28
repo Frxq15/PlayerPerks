@@ -1,0 +1,12 @@
+
+name: PlayerPerks
+version: 1.0
+main: me.Frxq15.PlayerPerks.Main
+api-version: 1.8
+authors: [Frxq15]
+description: Player Perks Plugin
+commands:
+  perks:
+    usage: /<command>
+    description: Open perks menu
+    aliases: [playerperks]

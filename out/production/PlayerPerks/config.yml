@@ -1,0 +1,270 @@
+DATABASE:
+  TABLE: "playerperks"
+  HOST: "116.202.192.119"
+  PORT: 3306
+  DATABASE: "s29_frxq15"
+  USERNAME: "u29_bZkuqQjOhJ"
+  PASSWORD: "!BQpiBr@^0L7^onX0gKcsy!e"
+NO_PERMISSION: "&cNo Permission."
+TARGET_NOT_FOUND: "&f[&bFactions&f] &7The player specified could not be found."
+PERK_ALREADY_UNLOCKED: "&f[&bFactions&f] &7You have already unlocked this perk."
+PURCHASE_FAILED: "&f[&bFactions&f] &7You cannot afford to purchase this perk."
+PERK_PURCHASED: "&f[&bFactions&f] &7You successfully purchased the &b%perk% &7perk."
+FLY_ENABLED: "&7You have &aenabled &7flight mode for %player%&7."
+FLY_DISABLED: "&7You have &cdisabled &7flight mode for %player%&7."
+FLY_ENABLED_OTHER: "&7You have &aenabled &7flight mode for &b%player%&7."
+FLY_DISABLED_OTHER: "&7You have &cdisabled &7flight mode &7for &b%player%&7."
+AFK_MESSAGE_LOCKED: "&f[&bFactions&f] &7You have not unlocked this perk, purchase this using &b/perks&7."
+AFK_MESSAGE_SET: "&f[&bFactions&f] &7Your AFK message was set to the following: \n&7%message%"
+AFK_MESSAGE_CLEARED: "&f[&bFactions&f] &7Your AFK message was cleared."
+AFK_MESSAGE_CLEARED_OTHER: "&f[&bFactions&f] &7You cleared the AFK message for &b%player%&7."
+GFLY_ENABLED: "&f[&bFactions&f] &7You have enabled global fly."
+GFLY_DISABLED: "&f[&bFactions&f] &7You have disabled global fly."
+GFLY_ALREADY_ENABLED: "&f[&bFactions&f] &7Global fly is already enabled."
+GFLY_ALREADY_DISABLED: "&f[&bFactions&f] &7Global fly is already disabled."
+GFLY_BC_DISABLED: "&7Global flight has been disabled."
+
+GUI:
+  GUI_TITLE: "&b&nPlayer Perks"
+  CONFIRM_GUI_TITLE: "&b&nConfirm Purchase:"
+  LORE_OUTCOMES:
+    CLICK_TO_PURCHASE: "&7Click to purchase this perk."
+    ALREADY_UNLOCKED: "&7You have already unlocked this perk."
+    STATUS_LOCKED: "&cLocked"
+    STATUS_UNLOCKED: "&aUnlocked"
+    CURRENTLY_DISABLED: "&cThis perk is currently disabled."
+    CANT_AFFORD: "&cYou cannot afford to purchase this perk."
+CONFIRMATION_GUI:
+  GUI_TITLE: "&b&nPurchase Confirmation"
+  PERKS:
+    FALL_DAMAGE:
+      LORE:
+        - '&7Tired of dieing from fall damage? Invest'
+        - '&7in this perk to stop yourself taking fall damage.'
+        - ''
+        - '&b&l • &7Cost: &b%cost%'
+        - '&b&l • &7Duration: &b%duration%'
+        - ''
+        - '%lore_outcome%'
+    INCREASE_DAMAGE:
+      LORE:
+        - '&7Ever wanted to deal more damage to enemies? Then purchase'
+        - '&7this incredible perk to have a chance in doing so.'
+        - ''
+        - '&b&l • &7Cost: &b%cost%'
+        - '&b&l • &7Duration: &b%duration%'
+        - ''
+        - '%lore_outcome%'
+    INCREASE_DURABILITY:
+      LORE:
+        - '&7Is your armor constantly breaking? Purchase this perk'
+        - '&7to give your armor a chance of taking less damage when hit.'
+        - ''
+        - '&b&l • &7Cost: &b%cost%'
+        - '&b&l • &7Duration: &b%duration%'
+        - ''
+        - '%lore_outcome%'
+    SPRINTER:
+      LORE:
+        - '&7Be in with a chance of receiving Speed III for 5 seconds'
+        - '&7upon killing an enemy player.'
+        - ''
+        - '&b&l • &7Cost: &b%cost%'
+        - '&b&l • &7Duration: &b%duration%'
+        - ''
+        - '%lore_outcome%'
+    EXP_MASTER:
+      LORE:
+        - '&7Have the chance of getting additional exp after'
+        - '&7you have killed an enemy player.'
+        - ''
+        - '&b&l • &7Cost: &b%cost%'
+        - '&b&l • &7Duration: &b%duration%'
+        - ''
+        - '%lore_outcome%'
+    FLY_PARTICLES:
+      LORE:
+        - '&7Want to look fancy while you fly? Purchase this'
+        - '&7perk to obtain your very own fly particles.'
+        - ''
+        - '&b&l • &7Cost: &b%cost%'
+        - '&b&l • &7Duration: &b%duration%'
+        - ''
+        - '%lore_outcome%'
+    SELL_MULTIPLIER:
+      LORE:
+        - '&7Not satisfied with your current earnings? Then'
+        - '&7purchase this perk to unlock a permanent 1.1x multiplier.'
+        - ''
+        - '&b&l • &7Cost: &b%cost%'
+        - '&b&l • &7Duration: &b%duration%'
+        - ''
+        - '%lore_outcome%'
+    POWER_BOOST:
+      LORE:
+        - '&7Is 100 not enough? Increase your own power'
+        - '&7boost by purchasing this perk to get an extra 50 power.'
+        - ''
+        - '&b&l • &7Cost: &b%cost%'
+        - '&b&l • &7Duration: &b%duration%'
+        - ''
+        - '%lore_outcome%'
+    CUSTOM_AFK_MESSAGE:
+      LORE:
+        - '&7Want to go AFK in style? Purchase this perk and set'
+        - '&7your own custom afk message using /setafkmessage.'
+        - ''
+        - '&b&l • &7Cost: &b%cost%'
+        - '&b&l • &7Duration: &b%duration%'
+        - ''
+        - '%lore_outcome%'
+    PURCHASE_DISCOUNT:
+      LORE:
+        - '&7Want to save money on items you purchase? Invest in'
+        - '&7this perk to gain a 5% discount on all shop items.'
+        - ''
+        - '&b&l • &7Cost: &b%cost%'
+        - '&b&l • &7Duration: &b%duration%'
+        - ''
+        - '%lore_outcome%'
+PERKS:
+  FALL_DAMAGE:
+    ENABLED: true
+    COST: 1000000
+    ITEM: "GOLD_BOOTS"
+    SLOT: 0
+    NAME: "&b&nFall Damage"
+    LORE:
+      - '&7Tired of dieing from fall damage? Invest in'
+      - '&7this perk to have a chance to stop taking fall damage.'
+      - ''
+      - '&b&l • &7Cost: &b%cost%'
+      - '&b&l • &7Status: %status%'
+      - ''
+      - '%lore_outcome%'
+  INCREASE_DAMAGE:
+    ENABLED: true
+    COST: 5000000
+    ITEM: "DIAMOND_SWORD"
+    SLOT: 1
+    NAME: "&b&nIncreased Damage"
+    LORE:
+      - '&7Ever wanted to deal more damage to enemies? Then purchase'
+      - '&7this incredible perk to have a chance in doing so.'
+      - ''
+      - '&b&l • &7Cost: &b%cost%'
+      - '&b&l • &7Status: %status%'
+      - ''
+      - '%lore_outcome%'
+  INCREASE_DURABILITY:
+    ENABLED: true
+    COST: 3000000
+    ITEM: "DIAMOND_CHESTPLATE"
+    SLOT: 2
+    NAME: "&b&nIncreased Durability"
+    LORE:
+      - '&7Is your armor constantly breaking? Purchase this perk'
+      - '&7to give your armor a chance of taking less damage when hit.'
+      - ''
+      - '&b&l • &7Cost: &b%cost%'
+      - '&b&l • &7Status: %status%'
+      - ''
+      - '%lore_outcome%'
+  SPRINTER:
+    ENABLED: true
+    COST: 1500000
+    ITEM: "SUGAR"
+    SLOT: 3
+    NAME: "&b&nSprinter"
+    LORE:
+      - '&7Be in with a chance of receiving Speed III for 5 seconds'
+      - '&7upon killing an enemy player.'
+      - ''
+      - '&b&l • &7Cost: &b%cost%'
+      - '&b&l • &7Status: %status%'
+      - ''
+      - '%lore_outcome%'
+  EXP_MASTER:
+    ENABLED: true
+    COST: 2500000
+    ITEM: "EXP_BOTTLE"
+    SLOT: 4
+    NAME: "&b&nEXP Master"
+    LORE:
+      - '&7Have the chance of getting additional exp after'
+      - '&7you have killed an enemy player.'
+      - ''
+      - '&b&l • &7Cost: &b%cost%'
+      - '&b&l • &7Status: %status%'
+      - ''
+      - '%lore_outcome%'
+  FLY_PARTICLES:
+    ENABLED: true
+    COST: 1000000
+    ITEM: "FEATHER"
+    SLOT: 5
+    NAME: "&b&nFly Particles"
+    LORE:
+      - '&7Want to look fancy while you fly? Purchase this'
+      - '&7perk to obtain your very own fly particles.'
+      - ''
+      - '&b&l • &7Cost: &b%cost%'
+      - '&b&l • &7Status: %status%'
+      - ''
+      - '%lore_outcome%'
+  SELL_MULTIPLIER:
+    ENABLED: true
+    COST: 7500000
+    ITEM: "GOLD_NUGGET"
+    SLOT: 6
+    NAME: "&b&nSell Multiplier"
+    LORE:
+      - '&7Not satisfied with your current earnings? Then'
+      - '&7purchase this perk to unlock a permanent 1.1x multiplier.'
+      - ''
+      - '&b&l • &7Cost: &b%cost%'
+      - '&b&l • &7Status: %status%'
+      - ''
+      - '%lore_outcome%'
+  POWER_BOOST:
+    ENABLED: true
+    COST: 4000000
+    ITEM: "SULPHUR"
+    SLOT: 7
+    NAME: "&b&nPower Boost"
+    LORE:
+      - '&7Is 100 not enough? Increase your own power'
+      - '&7boost by purchasing this perk to get an extra 50 power.'
+      - ''
+      - '&b&l • &7Cost: &b%cost%'
+      - '&b&l • &7Status: %status%'
+      - ''
+      - '%lore_outcome%'
+  CUSTOM_AFK_MESSAGE:
+    ENABLED: true
+    COST: 350000
+    ITEM: "NAME_TAG"
+    SLOT: 7
+    NAME: "&b&nCustom AFK Message"
+    LORE:
+      - '&7Want to go AFK in style? Purchase this perk and set'
+      - '&7your own custom afk message using /setafkmessage.'
+      - ''
+      - '&b&l • &7Cost: &b%cost%'
+      - '&b&l • &7Status: %status%'
+      - ''
+      - '%lore_outcome%'
+  PURCHASE_DISCOUNT:
+    ENABLED: true
+    COST: 15000000
+    ITEM: "BOOK"
+    SLOT: 8
+    NAME: "&b&nShop Discount"
+    LORE:
+      - '&7Want to save money on items you purchase? Invest in'
+      - '&7this perk to gain a 5% discount on all shop items.'
+      - ''
+      - '&b&l • &7Cost: &b%cost%'
+      - '&b&l • &7Status: %status%'
+      - ''
+      - '%lore_outcome%'

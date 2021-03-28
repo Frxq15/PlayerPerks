@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="EssentialsX">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../jar exports/EssentialsX.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
