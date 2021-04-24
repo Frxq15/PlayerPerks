@@ -51,14 +51,14 @@ public class FlyCommand implements CommandExecutor {
                 target.setFlying(false);
                 target.setAllowFlight(false);
                 p.sendMessage(Main.formatMsg("FLY_DISABLED_OTHER").replace("%player%", Manager.getPlayerMeta(target)));
-                target.sendMessage(Main.formatMsg("FLY_DISABLED"));
+                target.sendMessage(Main.formatMsg("FLY_DISABLED").replace("%player%", Manager.getPlayerMeta(target)));
                 flying.remove(target.getName());
                 return true;
             }
             target.setAllowFlight(true);
             target.setFlying(true);
             p.sendMessage(Main.formatMsg("FLY_ENABLED_OTHER").replace("%player%", Manager.getPlayerMeta(target)));
-            target.sendMessage(Main.formatMsg("FLY_ENABLED"));
+            target.sendMessage(Main.formatMsg("FLY_ENABLED").replace("%player%", Manager.getPlayerMeta(target)));
             flying.add(target.getName());
             return true;
 

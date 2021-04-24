@@ -21,7 +21,7 @@ public class PerksMenu extends GUITemplate {
     private Player p;
 
     public PerksMenu(Player player) {
-        super(4, Main.formatMsg("GUI" + ".GUI_TITLE"));
+        super(5, Main.formatMsg("GUI" + ".GUI_TITLE"));
         this.p = player;
         initializeItems(player);
     }
@@ -29,10 +29,10 @@ public class PerksMenu extends GUITemplate {
         Main.getInstance().getConfig().getConfigurationSection("PERKS").getKeys(false).forEach(perk -> {
             initializeItem(perk);
         });
-        for (int slot = 27; slot < 36; slot++) {
+        for (int slot = 36; slot < 45; slot++) {
             setItem(slot, pane(15));
         }
-        setItem(31, unlocks(p));
+        setItem(40, unlocks(p));
     }
     public void initializeItem(String perk) {
         OfflinePlayer op = p;

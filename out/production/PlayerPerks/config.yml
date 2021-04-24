@@ -25,8 +25,8 @@ GFLY_ALREADY_DISABLED: "&f[&bFactions&f] &7Global fly is already disabled."
 GFLY_BC_DISABLED: "&7Global flight has been disabled."
 
 GUI:
-  GUI_TITLE: "&b&nPlayer Perks"
-  CONFIRM_GUI_TITLE: "&b&nConfirm Purchase:"
+  GUI_TITLE: "&f&nPlayer Perks"
+  CONFIRM_GUI_TITLE: "&f&nConfirm Purchase:"
   LORE_OUTCOMES:
     CLICK_TO_PURCHASE: "&7Click to purchase this perk."
     ALREADY_UNLOCKED: "&7You have already unlocked this perk."
@@ -132,7 +132,7 @@ PERKS:
     ENABLED: true
     COST: 1000000
     ITEM: "GOLD_BOOTS"
-    SLOT: 0
+    SLOT: 11
     NAME: "&b&nFall Damage"
     LORE:
       - '&7Tired of dieing from fall damage? Invest in'
@@ -146,7 +146,7 @@ PERKS:
     ENABLED: true
     COST: 5000000
     ITEM: "DIAMOND_SWORD"
-    SLOT: 1
+    SLOT: 12
     NAME: "&b&nIncreased Damage"
     LORE:
       - '&7Ever wanted to deal more damage to enemies? Then purchase'
@@ -160,7 +160,7 @@ PERKS:
     ENABLED: true
     COST: 3000000
     ITEM: "DIAMOND_CHESTPLATE"
-    SLOT: 2
+    SLOT: 13
     NAME: "&b&nIncreased Durability"
     LORE:
       - '&7Is your armor constantly breaking? Purchase this perk'
@@ -174,7 +174,7 @@ PERKS:
     ENABLED: true
     COST: 1500000
     ITEM: "SUGAR"
-    SLOT: 3
+    SLOT: 14
     NAME: "&b&nSprinter"
     LORE:
       - '&7Be in with a chance of receiving Speed III for 5 seconds'
@@ -188,7 +188,7 @@ PERKS:
     ENABLED: true
     COST: 2500000
     ITEM: "EXP_BOTTLE"
-    SLOT: 4
+    SLOT: 15
     NAME: "&b&nEXP Master"
     LORE:
       - '&7Have the chance of getting additional exp after'
@@ -202,7 +202,7 @@ PERKS:
     ENABLED: true
     COST: 1000000
     ITEM: "FEATHER"
-    SLOT: 5
+    SLOT: 20
     NAME: "&b&nFly Particles"
     LORE:
       - '&7Want to look fancy while you fly? Purchase this'
@@ -216,7 +216,7 @@ PERKS:
     ENABLED: true
     COST: 7500000
     ITEM: "GOLD_NUGGET"
-    SLOT: 6
+    SLOT: 21
     NAME: "&b&nSell Multiplier"
     LORE:
       - '&7Not satisfied with your current earnings? Then'
@@ -230,7 +230,7 @@ PERKS:
     ENABLED: true
     COST: 4000000
     ITEM: "SULPHUR"
-    SLOT: 7
+    SLOT: 22
     NAME: "&b&nPower Boost"
     LORE:
       - '&7Is 100 not enough? Increase your own power'
@@ -244,7 +244,7 @@ PERKS:
     ENABLED: true
     COST: 350000
     ITEM: "NAME_TAG"
-    SLOT: 7
+    SLOT: 23
     NAME: "&b&nCustom AFK Message"
     LORE:
       - '&7Want to go AFK in style? Purchase this perk and set'
@@ -258,7 +258,7 @@ PERKS:
     ENABLED: true
     COST: 15000000
     ITEM: "BOOK"
-    SLOT: 8
+    SLOT: 24
     NAME: "&b&nShop Discount"
     LORE:
       - '&7Want to save money on items you purchase? Invest in'

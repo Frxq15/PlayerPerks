@@ -115,7 +115,7 @@ public class Main extends JavaPlugin {
                 }
                 Class.forName("com.mysql.jdbc.Driver");
                 setConnection(DriverManager.getConnection("jdbc:mysql://" + host + ":" + port + "/" + database + "?user=" + username + "&password="
-                        + password));
+                        + password+"?autoReconnect=true"));
                 Bukkit.getConsoleSender().sendMessage(ChatColor.AQUA+"[PlayerPerks] MySQL Connected successfully.");
 
             }

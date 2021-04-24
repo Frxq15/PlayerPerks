@@ -41,6 +41,7 @@ public class globalFlyCommand implements CommandExecutor, Listener {
                     return true;
                 }
                 Main.setGFly(false);
+                disableFly();
                 p.sendMessage(Main.formatMsg("GFLY_DISABLED"));
                 return true;
             default:
@@ -60,12 +61,13 @@ public class globalFlyCommand implements CommandExecutor, Listener {
                     for(Player p : Bukkit.getOnlinePlayers()) {
                         if((!p.hasPermission("playerperks.fly") && (p.isFlying()))) {
                             p.setFlying(false);
+                            p.setAllowFlight(false);
                         }
                     }
                     cancel();
 
                 } else {
-                    Bukkit.broadcastMessage(Main.colourize("&7Disabling fly in &b"+count[0] + " &7seconds."));
+                    Bukkit.broadcastMessage(Main.colourize("&7Disabling global flight in &b"+count[0] + " &7seconds."));
                     count[0]--;
                 }
             }
@@ -74,7 +76,7 @@ public class globalFlyCommand implements CommandExecutor, Listener {
     @EventHandler
     public void onJoin(PlayerJoinEvent e) {
         Player p = e.getPlayer();
-        if((Main.getGFly()) && (!p.hasPermission("playerperks.fly") && (p.isFlying()))) {
+        if((Main.getGFly() == false) && (!p.hasPermission("playerperks.fly") && (p.isFlying()))) {
             p.setFlying(false);
         }
     }
