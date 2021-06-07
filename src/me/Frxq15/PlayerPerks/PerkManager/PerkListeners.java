@@ -19,6 +19,7 @@ import org.bukkit.potion.PotionEffectType;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.scheduler.BukkitTask;
 
+import java.sql.SQLException;
 import java.util.Objects;
 
 public class PerkListeners implements Listener {
@@ -51,7 +52,7 @@ public class PerkListeners implements Listener {
     }
 
     @EventHandler
-    public void afk(AfkStatusChangeEvent e) {
+    public void afk(AfkStatusChangeEvent e) throws SQLException {
         Player p = e.getAffected().getBase();
         if (e.getValue()) {
             Bukkit.broadcastMessage("");
@@ -71,6 +72,7 @@ public class PerkListeners implements Listener {
     }
     @EventHandler
     public void onDamage(EntityDamageByEntityEvent e) {
+        if(e.getDamager() == null) { return; }
         if(e.getEntityType() != EntityType.PLAYER) {
             return;
         }
@@ -89,12 +91,9 @@ public class PerkListeners implements Listener {
     }
     @EventHandler
     public void Sprinter(PlayerDeathEvent e) {
-        if(e.getEntityType() != EntityType.PLAYER) {
-            return;
-        }
-        if(e.getEntity().getKiller().getType() != EntityType.PLAYER) {
-            return;
-        }
+        if(e.getEntity().getKiller() == null) { return; }
+        if(e.getEntityType() != EntityType.PLAYER) { return; }
+        if(e.getEntity().getKiller().getType() != EntityType.PLAYER) { return; }
         if (e.getEntity() != null && e.getEntity().getKiller() != null) {
             Player killer = e.getEntity().getKiller();
             if (killer.hasPermission("playerperks.perk.SPRINTER") && (Math.random() * 100 <= 15)) {
@@ -104,12 +103,9 @@ public class PerkListeners implements Listener {
     }
     @EventHandler
     public void EXP_MASTER(PlayerDeathEvent e) {
-        if(e.getEntityType() != EntityType.PLAYER) {
-            return;
-        }
-        if(e.getEntity().getKiller().getType() != EntityType.PLAYER) {
-            return;
-        }
+        if(e.getEntity().getKiller() == null) { return; }
+        if(e.getEntityType() != EntityType.PLAYER) { return; }
+        if(e.getEntity().getKiller().getType() != EntityType.PLAYER) { return; }
         if (e.getEntity() != null && e.getEntity().getKiller() != null) {
             Player killer = e.getEntity().getKiller();
             if (killer.hasPermission("playerperks.perk.EXP_MASTER") && (Math.random() * 100 <= 20)) {

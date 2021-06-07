@@ -9,6 +9,7 @@ import org.bukkit.event.player.AsyncPlayerPreLoginEvent;
 import org.bukkit.event.player.PlayerLoginEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 
+import java.sql.SQLException;
 import java.util.UUID;
 
 public class DataHandler implements Listener {
@@ -20,13 +21,12 @@ public class DataHandler implements Listener {
     }
 
     @EventHandler(priority = EventPriority.MONITOR, ignoreCancelled = true)
-    public void onAsyncPlayerPreLoginEvent(AsyncPlayerPreLoginEvent event) {
+    public void onAsyncPlayerPreLoginEvent(AsyncPlayerPreLoginEvent event) throws SQLException {
         UUID uuid = event.getUniqueId();
         String name = event.getName();
 
+        Main.getInstance().checkConnection();
         plugin.getSqlHelper().createPlayer(uuid, name);
-
-        PlayerData playerData = PlayerData.getPlayerData(plugin, uuid);
     }
 
     @EventHandler(priority = EventPriority.MONITOR, ignoreCancelled = true)
@@ -40,8 +40,8 @@ public class DataHandler implements Listener {
                 UUID uuid = event.getPlayer().getUniqueId();
 
                 PlayerData playerData = PlayerData.getPlayerData(plugin, uuid);
-                plugin.getSqlHelper().setAFKMessage(uuid, playerData.getAFKMessage());
-                PlayerData.removePlayerData(uuid);
+                    plugin.getSqlHelper().setAFKMessage(uuid, playerData.getAFKMessage());
+                    PlayerData.removePlayerData(uuid);
             });
     }
 }

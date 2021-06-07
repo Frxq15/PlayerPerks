@@ -62,7 +62,9 @@ public class Main extends JavaPlugin {
         }
     }
     public void onDisable() {
-        PlayerData.getAllPlayerData().forEach((uuid, playerData) -> sqlHelper.setAFKMessage(uuid, playerData.getAFKMessage()));
+        PlayerData.getAllPlayerData().forEach((uuid, playerData) -> {
+                sqlHelper.setAFKMessage(uuid, playerData.getAFKMessage());
+        });
         Bukkit.getConsoleSender().sendMessage(ChatColor.AQUA+"[PlayerPerks] Plugin disabled.");
     }
     public static Main getInstance() { return instance; }
@@ -115,7 +117,7 @@ public class Main extends JavaPlugin {
                 }
                 Class.forName("com.mysql.jdbc.Driver");
                 setConnection(DriverManager.getConnection("jdbc:mysql://" + host + ":" + port + "/" + database + "?user=" + username + "&password="
-                        + password+"?autoReconnect=true"));
+                        + password));
                 Bukkit.getConsoleSender().sendMessage(ChatColor.AQUA+"[PlayerPerks] MySQL Connected successfully.");
 
             }
@@ -127,13 +129,19 @@ public class Main extends JavaPlugin {
         }
     }
     public void checkConnection() throws SQLException {
-        if (connection == null || connection.isClosed()) {
+        if (connection.isClosed()) {
             SQLSetup();
         }
     }
     private void startSavingTask() throws SQLException {
-        checkConnection();
-        Bukkit.getScheduler().runTaskTimerAsynchronously(this, () -> PlayerData.getAllPlayerData().forEach((uuid, playerData) -> sqlHelper.setAFKMessage(uuid, playerData.getAFKMessage())), 20L * 60L * 5L, 20L * 60L * 5L);
+        Bukkit.getScheduler().runTaskTimerAsynchronously(this, () -> PlayerData.getAllPlayerData().forEach((uuid, playerData) -> {
+            try {
+                checkConnection();
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
+            sqlHelper.setAFKMessage(uuid, playerData.getAFKMessage());
+        }), 20L * 60L * 5L, 20L * 60L * 5L);
     }
     public Connection getConnection() {
         return connection;

@@ -28,7 +28,8 @@ public class SQLSetterGetter {
         }
         return false;
     }
-    public void createPlayer(final UUID uuid, String name) {
+    public void createPlayer(final UUID uuid, String name) throws SQLException {
+        checkConnection();
         try {
             PreparedStatement statement = plugin.getConnection().prepareStatement("SELECT * FROM " + plugin.table + " WHERE UUID=?");
             statement.setString(1, uuid.toString());
@@ -112,6 +113,11 @@ public class SQLSetterGetter {
             plugin.getConnection().prepareStatement("DROP TABLE IF EXISTS " + plugin.table).executeUpdate();
         }catch (SQLException e) {
             e.printStackTrace();
+        }
+    }
+    public static void checkConnection() throws SQLException {
+        if(plugin.getConnection().isClosed()) {
+            Main.getInstance().SQLSetup();
         }
     }
 }

@@ -148,6 +148,10 @@ public class PerksMenu extends GUITemplate {
             Manager.powerBoost(p, 50);
             return;
         }
+        if(perk.equalsIgnoreCase("CUSTOM_AFK_MESSAGE")) {
+            user.data().add(Node.builder("playerperks.command.setafkmessage").build());
+            return;
+        }
 
     }
     public void purchasePerk(Player p, String perk) {

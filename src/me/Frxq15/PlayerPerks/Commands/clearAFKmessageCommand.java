@@ -9,10 +9,12 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
+import java.sql.SQLException;
+
 public class clearAFKmessageCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender p, Command command, String s, String[] strings) {
-        if(!p.hasPermission("playerperks.clearafkmessage")) {
+        if(!p.hasPermission("playerperks.command.setafkmessage")) {
             p.sendMessage(Main.formatMsg("NO_PERMISSION"));
             return true;
         }

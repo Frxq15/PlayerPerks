@@ -14,6 +14,7 @@ import net.luckperms.api.node.matcher.NodeMatcher;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
+import java.sql.SQLException;
 import java.util.Collection;
 import java.util.Map;
 import java.util.Random;

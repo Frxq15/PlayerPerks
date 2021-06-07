@@ -3,6 +3,7 @@ package me.Frxq15.PlayerPerks.SQLManager;
 import me.Frxq15.PlayerPerks.Main;
 import org.bukkit.Bukkit;
 
+import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
@@ -26,7 +27,9 @@ public class PlayerData {
     public static void removePlayerData(UUID uuid) { players.remove(uuid); }
 
     public void uploadPlayerData(Main Main) {
-        Bukkit.getScheduler().runTaskAsynchronously(Main, () -> Main.getSqlHelper().setAFKMessage(uuid, afkmsg));
+        Bukkit.getScheduler().runTaskAsynchronously(Main, () -> {
+                Main.getSqlHelper().setAFKMessage(uuid, afkmsg);
+        });
     }
 
     public static PlayerData getPlayerData(Main Main, UUID uuid) {
