@@ -34,6 +34,7 @@ public class Main extends JavaPlugin {
     public int port;
     private static Economy econ = null;
     public static boolean gfly;
+    //test
 
 
     public void onEnable() {
