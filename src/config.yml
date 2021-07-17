@@ -1,11 +1,5 @@
-DATABASE:
-  TABLE: "playerperks"
-  HOST: "116.202.192.119"
-  PORT: 3306
-  DATABASE: "s29_frxq15"
-  USERNAME: "u29_bZkuqQjOhJ"
-  PASSWORD: "!BQpiBr@^0L7^onX0gKcsy!e"
 NO_PERMISSION: "&cNo Permission."
+NO_PERMISSION_FLY: "&f[&bFactions&f] &7You dont have access to this command, purchase &8[&9Legend&8] &7Rank from &bstore.guildcraft.net &7to unlock perks like this."
 TARGET_NOT_FOUND: "&f[&bFactions&f] &7The player specified could not be found."
 PERK_ALREADY_UNLOCKED: "&f[&bFactions&f] &7You have already unlocked this perk."
 PURCHASE_FAILED: "&f[&bFactions&f] &7You cannot afford to purchase this perk."
@@ -104,15 +98,6 @@ CONFIRMATION_GUI:
       LORE:
         - '&7Is 100 not enough? Increase your own power'
         - '&7boost by purchasing this perk to get an extra 50 power.'
-        - ''
-        - '&b&l • &7Cost: &b%cost%'
-        - '&b&l • &7Duration: &b%duration%'
-        - ''
-        - '%lore_outcome%'
-    CUSTOM_AFK_MESSAGE:
-      LORE:
-        - '&7Want to go AFK in style? Purchase this perk and set'
-        - '&7your own custom afk message using /setafkmessage.'
         - ''
         - '&b&l • &7Cost: &b%cost%'
         - '&b&l • &7Duration: &b%duration%'
@@ -230,25 +215,11 @@ PERKS:
     ENABLED: true
     COST: 4000000
     ITEM: "SULPHUR"
-    SLOT: 22
+    SLOT: 23
     NAME: "&b&nPower Boost"
     LORE:
       - '&7Is 100 not enough? Increase your own power'
       - '&7boost by purchasing this perk to get an extra 50 power.'
-      - ''
-      - '&b&l • &7Cost: &b%cost%'
-      - '&b&l • &7Status: %status%'
-      - ''
-      - '%lore_outcome%'
-  CUSTOM_AFK_MESSAGE:
-    ENABLED: true
-    COST: 350000
-    ITEM: "NAME_TAG"
-    SLOT: 23
-    NAME: "&b&nCustom AFK Message"
-    LORE:
-      - '&7Want to go AFK in style? Purchase this perk and set'
-      - '&7your own custom afk message using /setafkmessage.'
       - ''
       - '&b&l • &7Cost: &b%cost%'
       - '&b&l • &7Status: %status%'

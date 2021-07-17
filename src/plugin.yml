@@ -14,14 +14,6 @@ commands:
     usage: /<command>
     description: fly command
     aliases: [efly]
-  setafkmessage:
-    usage: /<command> <message>
-    description: setafkmessage command
-    aliases: [setafkmsg]
-  clearafkmessage:
-    usage: /<command> <message>
-    description: setafkmessage command
-    aliases: [clearafkmsg]
   globalfly:
     usage: /<command> <args>
     description: globalfly command

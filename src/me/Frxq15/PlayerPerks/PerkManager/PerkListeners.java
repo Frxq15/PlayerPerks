@@ -50,15 +50,6 @@ public class PerkListeners implements Listener {
             }
         }.runTaskTimer(Objects.requireNonNull(Bukkit.getServer().getPluginManager().getPlugin("PlayerPerks")), 20L, 20L);
     }
-
-    @EventHandler
-    public void afk(AfkStatusChangeEvent e) throws SQLException {
-        Player p = e.getAffected().getBase();
-        if (e.getValue()) {
-            Bukkit.broadcastMessage("");
-            Bukkit.broadcastMessage(Main.colourize(Manager.getAFKMessage(p)));
-        }
-    }
     @EventHandler
     public void onFall(EntityDamageEvent e) {
         if(e.getEntityType() != EntityType.PLAYER) {

@@ -33,10 +33,6 @@ public class Manager {
         FPlayer player = Main.getFPlayer(p);
         player.setPowerBoost(boost);
     }
-    public static String getAFKMessage(Player p) {
-        PlayerData playerData = PlayerData.getPlayerData(Main.getInstance(), p.getUniqueId());
-        return Main.colourize(AFKPrefix(p.getName()) + playerData.getAFKMessage());
-    }
     public static boolean isVanished(Player p) {
         if(Main.getInstance().getEssentialsPlayer(p).isVanished()) {
             return true;

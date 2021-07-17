@@ -17,7 +17,7 @@ public class FlyCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender p, Command command, String s, String[] strings) {
         if(!p.hasPermission("playerperks.fly")) {
-            p.sendMessage(Main.formatMsg("NO_PERMISSION"));
+            p.sendMessage(Main.formatMsg("NO_PERMISSION_FLY"));
             return true;
         }
 

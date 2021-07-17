@@ -21,7 +21,7 @@ public class DataHandler implements Listener {
     }
 
     @EventHandler(priority = EventPriority.MONITOR, ignoreCancelled = true)
-    public void onAsyncPlayerPreLoginEvent(AsyncPlayerPreLoginEvent event) throws SQLException {
+    public void onAsyncPlayerPreLoginEvent(AsyncPlayerPreLoginEvent event) throws SQLException, ClassNotFoundException {
         UUID uuid = event.getUniqueId();
         String name = event.getName();
 

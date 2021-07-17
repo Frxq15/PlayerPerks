@@ -42,13 +42,9 @@ public class Main extends JavaPlugin {
         sqlHelper = new SQLSetterGetter();
         saveDefaultConfig();
         setupEconomy();
-        SQLSetup();
-        SQLSetterGetter.createTable(table);
         getCommand("perks").setExecutor(new PerksCommand());
         getCommand("globalfly").setExecutor(new globalFlyCommand());
         getCommand("fly").setExecutor(new FlyCommand());
-        getCommand("setafkmessage").setExecutor(new setAFKmessageCommand());
-        getCommand("clearafkmessage").setExecutor(new clearAFKmessageCommand());
         Bukkit.getServer().getPluginManager().registerEvents(new globalFlyCommand(), this);
         Bukkit.getServer().getPluginManager().registerEvents(new VanishListener(), this);
         Bukkit.getServer().getPluginManager().registerEvents(new DataHandler(this), this);
@@ -130,9 +126,11 @@ public class Main extends JavaPlugin {
         }
     }
     public void checkConnection() throws SQLException {
-        if (connection.isClosed()) {
+        if (connection == null || connection.isClosed()) {
             SQLSetup();
+            return;
         }
+        return;
     }
     private void startSavingTask() throws SQLException {
         Bukkit.getScheduler().runTaskTimerAsynchronously(this, () -> PlayerData.getAllPlayerData().forEach((uuid, playerData) -> {
@@ -144,7 +142,7 @@ public class Main extends JavaPlugin {
             sqlHelper.setAFKMessage(uuid, playerData.getAFKMessage());
         }), 20L * 60L * 5L, 20L * 60L * 5L);
     }
-    public Connection getConnection() {
+    public Connection getConnection() throws SQLException {
         return connection;
     }
     public void setConnection(Connection connection) {
